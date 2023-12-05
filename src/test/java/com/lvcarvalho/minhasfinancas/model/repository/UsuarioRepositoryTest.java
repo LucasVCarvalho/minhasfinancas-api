@@ -75,7 +75,6 @@ public class UsuarioRepositoryTest {
 		//verificacao
 		Optional<Usuario> result = repository.findByEmail("usuario@email.com");
 		
-		//acao
 		Assertions.assertThat(result.isPresent()).isTrue();
 	}
 	
@@ -86,7 +85,6 @@ public class UsuarioRepositoryTest {
 		//verificacao
 		Optional<Usuario> result = repository.findByEmail("usuario@email.com");
 		
-		//acao
 		Assertions.assertThat(result.isPresent()).isFalse();
 	}
 	

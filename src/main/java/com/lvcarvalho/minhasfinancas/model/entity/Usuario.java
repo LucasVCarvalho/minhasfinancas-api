@@ -7,6 +7,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -32,6 +34,7 @@ public class Usuario {
 	private String email;
 	
 	@Column(name = "senha")
+	@JsonIgnore //esse Ignore serve pra não devolvermos o JSON mostrando a senha do usuario
 	private String senha;
 	
 	
